@@ -22,7 +22,7 @@ const { audio } = useAudio();
 if(!topPodcasters) return <LoaderSpinner />
 
 return (
-<section className={cn('right_sidebar h-[calc(100vh-5px)', {
+<section className={cn('right_sidebar h-[calc(100vh-5px) w-full', {
 'h-[calc(100vh-140px)]': audio?.audioUrl
 })}>
       <SignedIn>
@@ -51,8 +51,8 @@ return (
                 <Image
                 src={podcaster.imageUrl}
                 alt={podcaster.name}
-                width={44}
-                height={44}
+                width={40}
+                height={40}
                 className='aspect-square rounded-lg' 
                 />
                 <h2 className='text-14 font-semibold text-white-1'>{podcaster.name}</h2>

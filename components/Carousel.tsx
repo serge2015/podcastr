@@ -35,8 +35,8 @@ const EmblaCarousel = ({ fansLikeDetail }: CarouselProps) => {
   if(!slides) return <LoaderSpinner />
 
   return (
-    <section className="flex w-full flex-col gap-4 overlow-hidden" ref={emblaRef}>
-        <div className="flex">
+    <section className="flex w-full flex-col gap-4 overflow-hidden" ref={emblaRef}>
+        <div className="flex w-[250px]">
             {slides.slice(0, 5).map((item) => (
                 <figure
                 key={item._id}
@@ -46,7 +46,7 @@ const EmblaCarousel = ({ fansLikeDetail }: CarouselProps) => {
                     src={item.imageUrl}
                     alt='card'
                     fill
-                    className='absolute size-full rounded-xl border-none'/>
+                    className='absolute rounded-xl border-none'/>
                     <div className='glassmorphism-black relative z-10 flex flex-col rounded-b-xl p-4'>
                         <h2 className='text-14 font-semibold text-white-1'>{item.podcast[0]?.podcastTitle}</h2>
                         <p className='text-12 font-normal text-white-2'>{item.name}</p>
